@@ -1,6 +1,6 @@
 module github.com/ravendb/terraform-provider-ravendb
 
-go 1.17
+go 1.16
 
 require (
 	github.com/gruntwork-io/terratest v0.38.2
