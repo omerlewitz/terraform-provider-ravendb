@@ -1,6 +1,7 @@
 package ravendb
 
 import (
+	internal_operations "../operations"
 	"errors"
 	"fmt"
 	"github.com/gruntwork-io/terratest/modules/terraform"
@@ -8,7 +9,6 @@ import (
 	"github.com/ravendb/ravendb-go-client"
 	"github.com/ravendb/ravendb-go-client/serverwide/operations"
 	"os"
-	internal_operations "ravendb/operations"
 	"strconv"
 	"testing"
 )
