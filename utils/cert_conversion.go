@@ -2,7 +2,8 @@ package utils
 
 //#cgo windows CFLAGS: "-IC:/Program Files/OpenSSL-Win64/include"
 //#cgo windows LDFLAGS: "-LC:/Program Files/OpenSSL-Win64/lib" -llibcrypto
-//#cgo linux CFLAGS: -Wno-deprecated-declarations
+//#cgo linux LDFLAGS: -lssl -lcrypto
+//#cgo CFLAGS: -Wno-deprecated-declarations
 // #include "pfx.h"
 import "C"
 
@@ -12,7 +13,6 @@ import (
 	"strings"
 	"unsafe"
 )
-
 var initialized bool
 // from:
 // https://github.com/spacemonkeygo/openssl/blob/c2dcc5cca94ac8f7f3f0c20e20050d4cce9d9730/init.go
